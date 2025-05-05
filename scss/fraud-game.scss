@@ -1307,6 +1307,9 @@ a.tips__link-to-guide {
     font-size: 27px;
     color: var(--dark-color);
     margin-bottom: 40px;
+    &.failed {
+      color: #8f312c;
+    }
   }
 }
 
@@ -1348,7 +1351,7 @@ a.tips__link-to-guide {
     flex: 0 0 32px;
     color: var(--light-btn-color);
     &:after {
-      content: "\e918";
+      content: "\e901";
       font-family: "icomoon";
       position: relative;
     }
@@ -1401,27 +1404,24 @@ a.tips__link-to-guide {
     color: var(--dark-color);
     margin-bottom: 14px;
   }
-}
-.test-result_good {
-  .test-item__status {
-    &:after {
-      content: "\e901";
-      color: #a5cc9c;
+  &.passed {
+    .test-item__status {
+      &:after {
+        content: "\e901";
+        color: #a5cc9c;
+      }
     }
   }
-}
-.test-result_bad {
-  .test-result__title {
-    color: #8f312c;
-  }
-  .test-item__status {
-    &:after {
-      content: "\e918";
-      color: #8f312c;
+  &.failed {
+    .test-item__status {
+      &:after {
+        content: "\e918";
+        color: #8f312c;
+      }
     }
-  }
-  .test-item__content {
-    background-color: #fff1ee;
+    .test-item__content {
+      background-color: #fff1ee;
+    }
   }
 }
 

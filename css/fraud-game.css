@@ -1342,6 +1342,9 @@ a.tips__link-to-guide {
   color: var(--dark-color);
   margin-bottom: 40px;
 }
+.test-result__title.failed {
+  color: #8f312c;
+}
 
 .test-list {
   padding-left: 12px;
@@ -1388,7 +1391,7 @@ a.tips__link-to-guide {
   color: var(--light-btn-color);
 }
 .test-item__status:after {
-  content: "\e918";
+  content: "\e901";
   font-family: "icomoon";
   position: relative;
 }
@@ -1434,20 +1437,15 @@ a.tips__link-to-guide {
   color: var(--dark-color);
   margin-bottom: 14px;
 }
-
-.test-result_good .test-item__status:after {
+.test-item.passed .test-item__status:after {
   content: "\e901";
   color: #a5cc9c;
 }
-
-.test-result_bad .test-result__title {
-  color: #8f312c;
-}
-.test-result_bad .test-item__status:after {
+.test-item.failed .test-item__status:after {
   content: "\e918";
   color: #8f312c;
 }
-.test-result_bad .test-item__content {
+.test-item.failed .test-item__content {
   background-color: #fff1ee;
 }
 
