@@ -1,5 +1,5 @@
-@import url("../css/icon-font.css");
-@import url("../css/layout.css");
+@import url("icon-font.css");
+@import url("layout.css");
 :root {
   --dark-color: #263c3c;
   --text-color: #282828;
@@ -123,7 +123,6 @@ textarea {
 
 .step-guide__img {
   width: 100%;
-  max-height: 500px;
   border-radius: 7px;
   overflow: clip;
   margin-bottom: 21px;
@@ -133,7 +132,6 @@ textarea {
     border-radius: 0;
     margin-inline: -16px;
     width: unset;
-    height: 260px;
     margin-bottom: 28px;
   }
 }
@@ -154,14 +152,14 @@ textarea {
   line-height: 1.8em;
   color: var(--text-color);
 }
-.step-guide__text a {
+.step-guide__text a:not([class*=btn]) {
   text-decoration: underline;
   color: var(--accent-color);
   font-weight: 600;
   transition: color 0.3s;
 }
 @media (hover: hover) {
-  .step-guide__text a:hover {
+  .step-guide__text a:not([class*=btn]):hover {
     color: var(--accent-hover-color);
   }
 }
@@ -990,6 +988,18 @@ a.tips__link-to-guide {
   font-size: 16px;
   color: var(--text-color);
 }
+.fraud-question a:not([class*=btn]) {
+  text-decoration: underline;
+  color: var(--accent-color);
+  font-weight: 600;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+@media (hover: hover) {
+  .fraud-question a:not([class*=btn]):hover {
+    color: var(--accent-hover-color);
+  }
+}
 .fraud-question__img {
   border-radius: 17px;
   background: #fff;
@@ -1242,6 +1252,12 @@ a.tips__link-to-guide {
   margin-bottom: 60px;
 }
 
+@media (max-width: 767.98px) {
+  .questions-end {
+    padding-inline: 16px;
+  }
+}
+
 .answer-status {
   border: 1px solid var(--dark-color);
   border-radius: 7px;
@@ -1254,6 +1270,7 @@ a.tips__link-to-guide {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 24px;
+  flex-wrap: wrap;
 }
 @media (max-width: 767.98px) {
   .answer-status {
@@ -1266,6 +1283,7 @@ a.tips__link-to-guide {
   display: flex;
   gap: 16px;
   align-items: center;
+  flex: 1 1 50%;
 }
 .answer-status__icon {
   font-size: 44px;

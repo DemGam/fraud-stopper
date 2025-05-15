@@ -7,18 +7,8 @@
   --footer-bg-color: #2c2c2c;
   --header-bg-color: #263c3c;
 }
-@font-face {
-  font-family: "OpenSans";
-  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "OpenSans";
-  src: url("../fonts/OpenSans-Semibold.woff2") format("woff2"), url("../fonts/OpenSans-Semibold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-}
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap");
+
 //=== BASIC RESET =====================
 * {
   padding: 0;
@@ -33,12 +23,14 @@ html {
 html,
 body {
   height: 100%;
+  // height: 100dvh;
 }
 body {
   font-family: "Open Sans", sans-serif;
   background-color: var(--page-bg-color);
   overflow-x: clip;
   min-height: 100%;
+  // min-height: 100dvh;
   display: flex;
   flex-direction: column;
 
@@ -58,7 +50,7 @@ body {
   flex: auto;
   width: 100%;
   display: flex;
-  padding-top: 60px;
+  // padding-top: 60px;
   @media (max-width: 767.98px) {
     padding-bottom: 32px;
   }
@@ -104,7 +96,8 @@ body {
 .header {
   box-shadow: 0 3px 9px 0 rgba(83, 42, 31, 0.1);
   background: var(--header-bg-color);
-  position: fixed;
+  // position: fixed;
+  position: sticky;
   top: 0;
   right: 0;
   left: 0;
@@ -404,7 +397,7 @@ body {
   flex-direction: column;
   gap: 8px;
   @media (max-width: 767.98px) {
-    z-index: 1;
+    z-index: 2;
     flex-direction: row;
     position: fixed;
     bottom: 0;
@@ -631,5 +624,16 @@ a.custom-btn {
     padding: 8px;
     margin: 0 16px 16px;
     border-radius: 13px;
+  }
+}
+
+.mob-hide-toolbar {
+  @media (max-width: 767.98px) {
+    .toolbar {
+      display: none;
+    }
+    .vd-footer {
+      padding-bottom: 10px;
+    }
   }
 }
