@@ -5,8 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("Canvas element with id 'meter' not found.");
     return;
   }
+  const isColored = target.getAttribute("data-colored") === "true";
 
-  var opts = {
+  const opts = {
     angle: -0.29,
     lineWidth: 0.2,
     radiusScale: 1,
@@ -23,11 +24,18 @@ document.addEventListener("DOMContentLoaded", () => {
     generateGradient: true,
     highDpiSupport: true,
   };
+  if (isColored) {
+    opts.percentColors = [
+      [0.0, "#FF0000"], // red
+      [0.5, "#FFFF00"], // yellow
+      [1.0, "#00FF00"], // green
+    ];
+  }
 
-  var gauge = new Gauge(target).setOptions(opts);
+  let gauge = new Gauge(target).setOptions(opts);
   gauge.maxValue = 100;
   gauge.setMinValue(0);
-  gauge.animationSpeed = 32;
+  gauge.animationSpeed = isColored ? 50 : 32;
   gauge.setTextField(valueField);
 
   const initialValue = parseInt(target.getAttribute("data-value"), 10) || 0;

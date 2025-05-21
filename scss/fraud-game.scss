@@ -299,6 +299,9 @@ ul {
   list-style: none;
   padding-left: 0;
   font-weight: 400;
+
+  font-size: 1em;
+  line-height: 1.8em;
   li {
     position: relative;
     padding-left: 25px;
@@ -308,7 +311,6 @@ ul {
       color: var(--accent-color);
       position: absolute;
       left: 0;
-      line-height: 32px;
     }
   }
 }
@@ -645,6 +647,13 @@ textarea {
   }
 }
 
+.guide-card_full-img {
+  .guide-card__img {
+    img {
+      object-fit: contain;
+    }
+  }
+}
 .icon-btn {
   border-radius: 50%;
   width: 45px;
@@ -942,6 +951,11 @@ a.tips__link-to-guide {
     font-size: 16px;
     color: var(--text-color);
   }
+
+  ul {
+    font-size: 16px;
+  }
+
   a:not([class*="btn"]) {
     text-decoration: underline;
     color: var(--accent-color);
@@ -1487,5 +1501,14 @@ a.tips__link-to-guide {
         z-index: -1;
       }
     }
+  }
+}
+
+.items-list {
+  h2 {
+    margin-bottom: 5px;
+  }
+  ul:not(:last-of-type) {
+    margin-bottom: 15px;
   }
 }

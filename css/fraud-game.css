@@ -335,6 +335,8 @@ ul {
   list-style: none;
   padding-left: 0;
   font-weight: 400;
+  font-size: 1em;
+  line-height: 1.8em;
 }
 ul li {
   position: relative;
@@ -346,7 +348,6 @@ ul li:before {
   color: var(--accent-color);
   position: absolute;
   left: 0;
-  line-height: 32px;
 }
 
 ol {
@@ -690,6 +691,11 @@ textarea {
   padding-inline: 16px;
 }
 
+.guide-card_full-img .guide-card__img img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .icon-btn {
   border-radius: 50%;
   width: 45px;
@@ -987,6 +993,9 @@ a.tips__link-to-guide {
   line-height: 1.8em;
   font-size: 16px;
   color: var(--text-color);
+}
+.fraud-question ul {
+  font-size: 16px;
 }
 .fraud-question a:not([class*=btn]) {
   text-decoration: underline;
@@ -1499,4 +1508,11 @@ a.tips__link-to-guide {
   background-color: #fff;
   width: 32px;
   z-index: -1;
+}
+
+.items-list h2 {
+  margin-bottom: 5px;
+}
+.items-list ul:not(:last-of-type) {
+  margin-bottom: 15px;
 }
