@@ -116,11 +116,16 @@ body {
   right: 0;
   left: 0;
   z-index: 11;
+  transition: all 0.3s ease-in-out, top 0.3s ease;
 }
 @media (max-width: 767.98px) {
   .header {
     box-shadow: none;
   }
+}
+
+.header.header-hidden {
+  transform: translate3d(0, -100%, 0);
 }
 
 .header__row {
@@ -310,10 +315,17 @@ body {
   position: -webkit-sticky;
   position: sticky;
   top: 84px;
+  transition: all 0.3s ease-in-out, top 0.3s ease;
 }
 @media (max-width: 767.98px) {
   .sidebar__sticky-content {
     position: static;
+  }
+}
+
+@media (min-width: 768px) {
+  .sidebar__sticky-content.moveUp {
+    transform: translate3d(0, -65px, 0);
   }
 }
 

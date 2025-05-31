@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>Correct Choice</title>
+  <title>Phone</title>
   <link rel="stylesheet" href="../css/fraud-game.css">
 </head>
 
@@ -85,45 +85,45 @@
         </div>
       </div>
     </div>
+
     <div class="main main_without-overflow">
-      <div class="answer-status">
-        <div class="answer-status__text"><span class="answer-status__icon icon-check-circle-filled"></span>
-          <span>Correct choice</span>
+      <section class="step-guide">
+        <div class="step-guide-header-wrapper">
+          <div class="step-guide-header">
+            <h2 class="step-guide-header__title">Undersøger dit telefonnummer</h2>
+          </div>
         </div>
-        <a href="#" class="step-btn step-btn_next">Next</a>
-      </div>
+        <div class="testing">
+          <div class="testing__title">
+            <div class="testing__icon">
+              <span class="icon-warning"></span>
+            </div>
+            <div class="testing__text">Indtast dit telefonnummer:</div>
+          </div>
+          <div class="testing__meter phone-form">
+            <p class="form-text">Vi undersøger og finder frem til alle de steder, hvor dit telefonnummer er listet
+              offentligt.
+            </p>
+            <form role="form " method="POST" action="https://plusmedlem.dk/fraud/phonenumber/enter">
 
-      <div class="fraud-question fraud-question_explanation">
-        <p>
-          Phishing emails are one of the most common types of online fraud. Cybercriminals design these emails to look
-          like
-          official messages from trusted companies, such as Visa, in an attempt to steal your personal information.
-          However,
-          legitimate organizations will never ask you to verify your account or provide sensitive data through an email
-          link. By
-          reporting the email as spam, you help email providers identify and block similar scams, protecting yourself
-          and others
-          from potential fraud.
-        </p>
-        <p>Deleting the email immediately ensures you don’t accidentally interact with it in the future. Even opening a
-          phishing
-          email repeatedly can be risky, as some scams use hidden tracking pixels to detect active email accounts. The
-          safest
-          approach is to avoid clicking any links, never downloading attachments from unknown senders, and always
-          verifying
-          information directly on the official website of the company in question.</p>
-        <div class="fraud-question__img">
-          <img src="../img/question-image.jpg" alt="image">
-        </div>
-        <div class="txt-center">
-          <a href="#" class="step-btn step-btn_next">Next</a>
-        </div>
-      </div>
+              <input type="hidden" name="_token" value="Dtifo8xetwbQy2zfJFhPUoVbSnnOjXk5PyVB5Qro">
 
-      <div class="pause-game">
-        <a href="#" class="step-btn step-btn_light step-btn_pause">Pause / Stop Game</a>
-      </div>
+              <div class="form-group">
+                <label class="label" for="phonenumber">Dit telefonnummer *</label>
+                <input class="input" id="phonenumber" type="input" name="phonenumber" placeholder="Dit telefonnummer"
+                  maxlength="8" required="" autofocus="" inputmode="numeric">
+              </div>
+              <div><button type="submit" class="step-btn">
+                  Undersøg telefonnummer
+                </button></div>
+            </form>
+          </div>
+        </div>
+
+
+      </section>
     </div>
+
   </div>
   <footer class="vd-footer">
     <div class="vd-wrapper">
@@ -141,8 +141,12 @@
     </div>
   </footer>
   <script src="../js/script.js"></script>
-
-  <script src="../js/media.js"></script>
+  <script>
+    const phoneInput = document.getElementById('phonenumber');
+    phoneInput.addEventListener('input', function () {
+      this.value = this.value.replace(/\D/g, '');
+    });
+  </script>
 </body>
 
 </html>
