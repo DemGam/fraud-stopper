@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>Tips</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Header with burger</title>
   <link rel="stylesheet" href="../css/fraud-game.css">
 </head>
 
@@ -101,48 +101,92 @@
           </div>
         </div>
       </div>
-      <div class="main main_without-overflow ">
+      <div class="main main_without-overflow">
+
+
         <section class="step-guide tips">
           <div class="step-guide-header-wrapper">
             <div class="step-guide-header">
-              <h2 class="step-guide-header__title">Use two-factor login for your Facebook account</h2>
+              <h2 class="step-guide-header__title">Chrome er den bedste browser imod svindel</h2>
             </div>
           </div>
           <div class="step-guide__img">
-            <img src="../img/step2.jpg" alt="tips image">
+            <img src="https://plusmedlem.dk/storage/fraud/tips/hXcXtFOcSv3FQRgPbTduM2d7exZFnxD5UbtTnhMR.png"
+              alt="tips image">
           </div>
           <div class="step-guide__text">
             <p>
-              Two-factor authentication, often abbreviated as 2FA, is a security process that requires users to provide
-              two different
-              authentication factors to verify their identity. This process enhances the security of your account by
-              combining two
-              elements: something you know (your password) and something you have (a code sent to your phone).
+
             </p>
-            <p>Enabling 2FA on your Facebook account helps protect against unauthorized access, even if someone has your
-              password. This
-              additional layer of security makes it significantly harder for hackers to gain control of your account.
-            </p>
-            <p>With 2FA enabled, you'll receive a unique verification code on your phone or email whenever you log in
-              from
-              a new
-              device. This code must be entered alongside your password to access your account.</p>
+            <h1>Google Chrome: Den mest sikre browser imod svindel</h1>
+
+            <p>I en tid, hvor digitale trusler og online svindel er mere udbredt end nogensinde før, er valget af
+              browser
+              afgørende for din sikkerhed på nettet. Google Chrome har i mange år været verdens mest populære browser –
+              og
+              med
+              god grund. En af de mest vægtige årsager er dens stærke fokus på sikkerhed, særligt når det gælder
+              beskyttelse
+              mod svindel og phishing.</p>
+
+            <p>Google Chrome er ikke kun hurtig og brugervenlig – den er også en af de bedste browsere, når det gælder
+              sikkerhed imod svindel. Kombinationen af realtidsbeskyttelse, automatiske opdateringer, og stærke
+              sikkerhedsfunktioner gør Chrome til et solidt valg for dem, der ønsker at færdes trygt på nettet.</p>
+
+            <p>Her er hvorfor Google Chrome ofte anses som den mest sikre browser imod online svindel:</p>
+
+            <div class="items-list">
+              <h2>1. Avanceret phishing-beskyttelse</h2>
+              <ul>
+                <li>Blokerer sider kendt for phishing og malware.</li>
+                <li>Advarer om farlige downloads.</li>
+                <li>Opdateres konstant med de nyeste trusler.</li>
+              </ul>
+
+              <h2>2. Sandkasse-teknologi</h2>
+              <ul>
+                <li>Hver fane kører i sin egen sikre "boks".</li>
+                <li>Reducerer risikoen for, at skadelig kode kan sprede sig.</li>
+                <li>Gør det langt sværere for hackere at stjæle oplysninger.</li>
+              </ul>
+
+              <h2>3. Automatiske opdateringer</h2>
+              <ul>
+                <li>Ingen brugerhandling krævet.</li>
+                <li>Hurtige reaktioner på nye trusler.</li>
+                <li>Konstant forbedring af sikkerhedsprotokoller.</li>
+              </ul>
+
+              <h2>4. Avanceret adgangskodebeskyttelse</h2>
+              <ul>
+                <li>Advarsler om lækkede eller svage adgangskoder.</li>
+                <li>Automatisk generering af sikre adgangskoder.</li>
+                <li>Integration med 2-faktor autentificering.</li>
+              </ul>
+
+              <h2>5. Stærk politik for udvidelsessikkerhed</h2>
+              <ul>
+                <li>Automatisk fjernelse af skadelige udvidelser.</li>
+                <li>Brugere advares ved mistænkelig aktivitet.</li>
+                <li>Begrænset adgang for udvidelser til kun de nødvendige data.</li>
+              </ul>
+            </div>
+            <p></p>
           </div>
-          <a href="#" class="step-btn step-btn_next step-btn_light tips__link-to-guide">Step by step guide to add two
-            factor login</a>
+
 
           <form class="guide-feedback-form">
             <div class="step-guide__title">
-              How helpful was this guide?
+              Hvad synes du om rådet?
             </div>
             <div class="radio-feedback">
               <label class="img-option">
                 <input type="radio" name="option" value="1">
                 <span class="img-option__wrapper">
-                  <span class="img-option__content">
-                    <img src="../img/frustrating.svg" alt="Frustrating">
-                    <span class="img-option__title">Frustrating</span>
-                    <span class="img-option__text">It didn’t help me at all</span>
+                  <span class="img-option__content" onclick="rate(1)">
+                    <img src="https://plusmedlem.dk/img/fraud/rate/frustrating.svg" alt="Frustrating">
+                    <span class="img-option__title">Virkelig dårligt råd</span>
+                    <span class="img-option__text">Et elendigt råd som er total spild af tid at læse</span>
                   </span>
                 </span>
               </label>
@@ -150,10 +194,10 @@
               <label class="img-option">
                 <input type="radio" name="option" value="2">
                 <span class="img-option__wrapper">
-                  <span class="img-option__content">
-                    <img src="../img/not-helpful.svg" alt="Not Helpful">
-                    <span class="img-option__title">Not Helpful</span>
-                    <span class="img-option__text">I struggled to follow the steps</span>
+                  <span class="img-option__content" onclick="rate(2)">
+                    <img src="https://plusmedlem.dk/img/fraud/rate/not-helpful.svg" alt="Not Helpful">
+                    <span class="img-option__title">Dårligt råd</span>
+                    <span class="img-option__text">Et ret dårligt råd, som du ikke føler hjalp dig</span>
                   </span>
                 </span>
               </label>
@@ -161,10 +205,10 @@
               <label class="img-option">
                 <input type="radio" name="option" value="3">
                 <span class="img-option__wrapper">
-                  <span class="img-option__content">
-                    <img src="../img/neutral.svg" alt="Neutral">
-                    <span class="img-option__title">Neutral</span>
-                    <span class="img-option__text">It was okay, but could be improved</span>
+                  <span class="img-option__content" onclick="rate(3)">
+                    <img src="https://plusmedlem.dk/img/fraud/rate/neutral.svg" alt="Neutral">
+                    <span class="img-option__title">Et OK råd</span>
+                    <span class="img-option__text">Rådet er hverken godt eller dårligt</span>
                   </span>
                 </span>
               </label>
@@ -172,10 +216,10 @@
               <label class="img-option">
                 <input type="radio" name="option" value="4">
                 <span class="img-option__wrapper">
-                  <span class="img-option__content">
-                    <img src="../img/helpful.svg" alt="Helpful">
-                    <span class="img-option__title">Helpful</span>
-                    <span class="img-option__text">It worked well, but I had some minor issues</span>
+                  <span class="img-option__content" onclick="rate(4)">
+                    <img src="https://plusmedlem.dk/img/fraud/rate/helpful.svg" alt="Helpful">
+                    <span class="img-option__title">Godt råd</span>
+                    <span class="img-option__text">Et godt råd som du føler hjælper dig mod svindel</span>
                   </span>
                 </span>
               </label>
@@ -183,51 +227,61 @@
               <label class="img-option">
                 <input type="radio" name="option" value="5">
                 <span class="img-option__wrapper">
-                  <span class="img-option__content">
-                    <img src="../img/very-helpful.svg" alt="Very Helpful">
-                    <span class="img-option__title">Very Helpful</span>
-                    <span class="img-option__text">Everything was clear and easy to follow!</span>
+                  <span class="img-option__content" onclick="rate(5)">
+                    <img src="https://plusmedlem.dk/img/fraud/rate/very-helpful.svg" alt="Very Helpful">
+                    <span class="img-option__title">Virkelig godt råd</span>
+                    <span class="img-option__text">Et virkelig godt råd, som du er ekstra glad for at have læst</span>
                   </span>
                 </span>
               </label>
             </div>
 
-            <div class="form-group">
-              <label class="label" for="note">Leave a note about the guide to us <span
-                  class="small-txt">(optional)</span></label>
-              <textarea class="textarea" id="note" name="note" placeholder="Write here a note..."></textarea>
-            </div>
-
-            <div class="step-guide__nav">
-              <a href="../pages/step-2.html" class="step-btn step-btn_prev step-btn_light">Back to the steps</a>
-              <button type="submit" class="step-btn step-btn_next">Send</button>
-            </div>
           </form>
+
           <div class="line-divider"></div>
         </section>
 
 
+
+
         <section class="other-tips">
           <h2 class="popular-guides__title">
-            Other tips to avoid fraud
+            De bedste råd mod svindel
           </h2>
           <div class="tips-list">
-            <a href="#" class="tip-link">
-              <div class="tip-link__title">How to set your Facebook account to private</div>
+
+
+            <a href="https://plusmedlem.dk/fraud/tip/view/4" class="tip-link">
+              <div class="tip-link__title">Chrome er den bedste browser imod svindel</div>
               <div class="tip-link__arrow icon-arrow-right"></div>
             </a>
-            <a href="#" class="tip-link">
-              <div class="tip-link__title">How to backup all your Facebook data</div>
+
+
+            <a href="https://plusmedlem.dk/fraud/tip/view/1" class="tip-link">
+              <div class="tip-link__title">Din Facebook konto skal være privat</div>
               <div class="tip-link__arrow icon-arrow-right"></div>
             </a>
-            <a href="#" class="tip-link">
-              <div class="tip-link__title">How to lock your credit data</div>
+
+
+            <a href="https://plusmedlem.dk/fraud/tip/view/2" class="tip-link">
+              <div class="tip-link__title">Skiftet fra Windows 10 til Windows 11</div>
               <div class="tip-link__arrow icon-arrow-right"></div>
             </a>
+
+
+            <a href="https://plusmedlem.dk/fraud/tip/view/3" class="tip-link">
+              <div class="tip-link__title">Vælg en internetudbyder som gør ekstra mod svindel</div>
+              <div class="tip-link__arrow icon-arrow-right"></div>
+            </a>
+
+
           </div>
         </section>
 
+
+
       </div>
+
     </div>
     <footer class="vd-footer">
       <div class="vd-wrapper">
@@ -243,11 +297,10 @@
 
         </div>
       </div>
-
     </footer>
   </div>
-  <script src="../js/script.js"></script>
 
+  <script src="../js/script.js"></script>
 </body>
 
 </html>
